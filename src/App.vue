@@ -12,7 +12,7 @@ const list = ref([
 async function getList() {
 
   const res = await axios({
-    url: "https://p7ehc7qlmc.hzh.sealos.run/get_list",
+    url: "https://gi3ielbr3v.hzh.sealos.run/get_list",
     method: "GET"
   })
   list.value = res.data.list;
@@ -21,7 +21,7 @@ async function getList() {
 async function add() {
 
   await axios({
-    url: "https://p7ehc7qlmc.hzh.sealos.run/post_list",
+    url: "https://gi3ielbr3v.hzh.sealos.run/post_list",
     method: "POST",
     data: {
       text: value.value,
@@ -34,7 +34,7 @@ async function add() {
 
 async function update(id) {
   await axios({
-    url: "https://p7ehc7qlmc.hzh.sealos.run/update_todo",
+    url: "https://gi3ielbr3v.hzh.sealos.run/update_todo",
     method: "POST",
     data: {
       id,
@@ -45,7 +45,7 @@ async function update(id) {
 
 async function remove(id) {
   await axios({
-    url:"https://p7ehc7qlmc.hzh.sealos.run/remove_todo",
+    url:"https://gi3ielbr3v.hzh.sealos.run/remove_todo",
     method:"POST",
     data:{
       id:id,
@@ -123,10 +123,7 @@ function handleKeydown(event) {
   width: 80px;
   height: 50px;
   border-radius: 0 20px 20px 0;
-  background: linear-gradient(to right,
-      rgb(113, 65, 168),
-      rgba(44, 114, 251, 1));
-  text-align: center;
+  background-image: linear-gradient(to right top, #000000, #151515, #222222, #303030, #3e3e3e);  text-align: center;
   ;
   font-size: 15px;
   color: #dfe1e5;
@@ -172,10 +169,7 @@ function handleKeydown(event) {
 }
 
 body {
-  background: linear-gradient(to right,
-      rgb(113, 65, 168),
-      rgba(44, 114, 251, 1));
-}
+  background-image: linear-gradient(to right top, #000000, #151515, #222222, #303030, #3e3e3e);}
 </style>
 <!-- 四个接口代码 -->
 <!-- 
